@@ -15,7 +15,7 @@ query{
         slug
         country
         days
-		contentful_id
+		    contentful_id
         images{
             fluid{
                 ...GatsbyContentfulFluid_tracedSVG
