@@ -5,6 +5,7 @@ import Banner from '../component/Banner'
 import About from '../component/Home/About'
 import Services from '../component/Home/Services'
 import StyledHero from '../component/StyledHero'
+import FeaturedTours from '../component/Home/FeaturedTours'
 import { graphql } from 'gatsby'
 
 export default ({data}) => {
@@ -17,6 +18,7 @@ export default ({data}) => {
       </StyledHero>
       <About />
       <Services />
+      <FeaturedTours />
     </Layout>
     )
 }
