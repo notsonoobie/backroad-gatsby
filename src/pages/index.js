@@ -1,4 +1,5 @@
 import React from "react"
+import SEO from '../component/SEO'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Layout from "../component/Layout"
 import Banner from '../component/Banner'
@@ -11,6 +12,7 @@ import { graphql } from 'gatsby'
 export default ({data}) => {
   return (
     <Layout>
+      <SEO title='Home' description='Backroad - A Tour Provider Company' />
       <StyledHero home='true' img={data.DefaultBcg.childImageSharp.fluid}>
         <Banner title='start exploring tours' info='SO MUCH LEFT TO BE DISCOVERED'>
           <AniLink fade to='/tours' className='btn-white'>Explore Tours</AniLink>

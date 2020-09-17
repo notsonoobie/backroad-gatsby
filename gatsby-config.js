@@ -12,10 +12,15 @@ require("dotenv").config({
   /* Your site config here */
   siteMetadata: {
     title: "Backroad",
-    description: "Explore Awesome Worldwide Tours",
+    description: "Explore Awesome Worldwide Tours - All Tours Available at cheapest price.",
     author: "Rahul Gupta",
+    twitterUserName : "@notsonoobie",
+    img : '/defaultBcg.jpeg',
+    siteUrl : 'https://notsonoobie-backroad-gatsby.netlify.app',
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,6 +34,14 @@ require("dotenv").config({
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://notsonoobie-backroad-gatsby.netlify.app',
+        sitemap: 'https://notsonoobie-backroad-gatsby.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     },
     `gatsby-plugin-playground`,
     `gatsby-plugin-styled-components`,

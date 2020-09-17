@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../component/Layout'
+import SEO from '../component/SEO'
 import StyledHero from '../component/StyledHero'
 import styles from '../css/template.module.css'
 import Img from 'gatsby-image'
@@ -13,6 +14,7 @@ const TourTemplate = ({ data }) => {
     const [mainImg, ...tourImg] = images
     return (
         <Layout>
+        <SEO title={name} />
             <StyledHero img={mainImg.fluid} />
             <section className={styles.template}>
                 <div className={styles.center}>
